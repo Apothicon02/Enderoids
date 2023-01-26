@@ -6,9 +6,11 @@ buildscript {
     }
     dependencies {
         classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '5.1.+', changing: true
+        classpath group: 'org.spongepowered', name: 'mixingradle', version: '0.7.32'
     }
 }
 apply plugin: 'net.minecraftforge.gradle'
+apply plugin: 'org.spongepowered.mixin'
 // Only edit below this line, the above code adds and enables the necessary things for Forge to be setup.
 apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
@@ -19,6 +21,9 @@ archivesBaseName = 'enderoids'
 
 // Mojang ships Java 17 to end users in 1.18+, so your mod should target Java 17.
 java.toolchain.languageVersion = JavaLanguageVersion.of(17)
+mixin {
+    disableAnnotationProcessorCheck()
+}
 
 println('Java: ' + System.getProperty('java.version') + ' JVM: ' + System.getProperty('java.vm.version') + '(' + System.getProperty('java.vendor') + ') Arch: ' + System.getProperty('os.arch'))
 minecraft {
@@ -53,8 +58,8 @@ minecraft {
             // You can set various levels here.
             // Please read: https://stackoverflow.com/questions/2031163/when-to-use-the-different-log-levels
             //property 'forge.logging.console.level', 'debug'
-            //property 'mixin.env.remapRefMap', 'true'
-            //property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
+            property 'mixin.env.remapRefMap', 'true'
+            property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
 
             mods {
                 enderoids {
@@ -156,8 +161,12 @@ dependencies {
     // Examples using mod jars from ./libs
     // implementation fg.deobf("blank:coolmod-${mc_version}:${coolmod_version}")
 
+    annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
+
+    // kotlin
+    implementation fg.deobf("curse.maven:kotlin-for-forge-351264:4311661")
     // valkyrien skies
-    implementation fg.deobf("curse.maven:valkyrien-skies-258371:3286262")
+    implementation fg.deobf("curse.maven:valkyrien-skies-258371:4328252")
     // eureka ships
     implementation fg.deobf("curse.maven:eureka-ships-654384:4332005")
 

@@ -40,14 +40,14 @@ The sky is falling!
 '''
 # A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
 [[dependencies.enderoids]]
-    modId="valkyrienskies"
-    mandatory=true
-    versionRange="[1.1.7,)"
-    ordering="BEFORE"
-    side="BOTH"
-[[dependencies.enderoids]]
     modId="vs_eureka"
     mandatory=true
     versionRange="[1.1.0-beta5,)"
     ordering="AFTER"
+    side="BOTH"
+[[dependencies.enderoids]]
+    modId="valkyrienskies"
+    mandatory=true
+    versionRange="[2.1.0-beta9,)"
+    ordering="NONE"
     side="BOTH"
