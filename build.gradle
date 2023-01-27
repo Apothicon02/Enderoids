@@ -166,9 +166,9 @@ dependencies {
     // kotlin
     implementation fg.deobf("curse.maven:kotlin-for-forge-351264:4311661")
     // valkyrien skies
-    implementation fg.deobf("curse.maven:valkyrien-skies-258371:4328252")
+    implementation fg.deobf("curse.maven:valkyrien-skies-258371:4367151")
     // eureka ships
-    implementation fg.deobf("curse.maven:eureka-ships-654384:4332005")
+    implementation fg.deobf("curse.maven:eureka-ships-654384:4367155")
     // flywheel
     implementation fg.deobf("curse.maven:flywheel-486392:4341461")
     // create

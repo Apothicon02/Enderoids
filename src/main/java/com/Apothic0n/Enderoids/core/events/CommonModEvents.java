@@ -26,7 +26,12 @@ public class CommonModEvents {
             boneStackEntity.setDefaultPickUpDelay();
             level.addFreshEntity(boneStackEntity);
         } else if (event.getSource().equals(DamageSource.OUT_OF_WORLD)) {
-            entity.teleportTo(entity.getX(), 321, entity.getZ());
+            if (level.dimension().equals(Level.END)) {
+                entity.teleportTo(entity.getX(), 321, entity.getZ());
+            } else {
+                entity.changeDimension(entity.getServer().getLevel(Level.END));
+                entity.teleportTo(428, 75, 2);
+            }
         }
     }
 }

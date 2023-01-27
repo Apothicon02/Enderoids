@@ -42,13 +42,13 @@ The sky is falling!
 [[dependencies.enderoids]]
     modId="vs_eureka"
     mandatory=true
-    versionRange="[1.1.0-beta5,)"
+    versionRange="[1.1.0-beta6,)"
     ordering="AFTER"
     side="BOTH"
 [[dependencies.enderoids]]
     modId="valkyrienskies"
     mandatory=true
-    versionRange="[2.1.0-beta9,)"
+    versionRange="[2.1.0-beta10,)"
     ordering="NONE"
     side="BOTH"
 [[dependencies.enderoids]]
