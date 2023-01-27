@@ -169,6 +169,10 @@ dependencies {
     implementation fg.deobf("curse.maven:valkyrien-skies-258371:4328252")
     // eureka ships
     implementation fg.deobf("curse.maven:eureka-ships-654384:4332005")
+    // flywheel
+    implementation fg.deobf("curse.maven:flywheel-486392:4341461")
+    // create
+    implementation fg.deobf("curse.maven:create-328085:4341477")
 
     // For more info...
     // http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html

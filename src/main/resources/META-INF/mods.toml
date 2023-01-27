@@ -51,3 +51,15 @@ The sky is falling!
     versionRange="[2.1.0-beta9,)"
     ordering="NONE"
     side="BOTH"
+[[dependencies.enderoids]]
+    modId="create"
+    mandatory=true
+    versionRange="[0.5.0h,)"
+    ordering="AFTER"
+    side="BOTH"
+[[dependencies.enderoids]]
+    modId="flywheel"
+    mandatory=true
+    versionRange="[0.6.9.a,)"
+    ordering="NONE"
+    side="BOTH"

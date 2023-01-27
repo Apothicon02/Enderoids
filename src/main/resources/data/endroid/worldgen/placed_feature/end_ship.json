@@ -1,0 +1,8 @@
+{
+  "feature": "endroid:end_ship",
+  "placement": [
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}
