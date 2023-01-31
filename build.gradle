@@ -141,6 +141,9 @@ repositories {
             includeGroup "curse.maven"
         }
     }
+    maven {
+        url = 'https://maven.valkyrienskies.org'
+    }
 }
 
 dependencies {
@@ -149,9 +152,9 @@ dependencies {
     // The userdev artifact is a special name and will get all sorts of transformations applied to it.
     minecraft 'net.minecraftforge:forge:1.18.2-40.1.69'
     // compile against the JEI API but do not include it at runtime
-    compileOnly fg.deobf("mezz.jei:jei-${'1.18.2'}:${'9.5.3.143'}:api")
+    compileOnly fg.deobf("mezz.jei:jei-${'1.18.2'}:${'9.7.1.255'}:api")
     // at runtime, use the full JEI jar
-    runtimeOnly fg.deobf("mezz.jei:jei-${'1.18.2'}:${'9.5.3.143'}")
+    runtimeOnly fg.deobf("mezz.jei:jei-${'1.18.2'}:${'9.7.1.255'}")
 
     // Real mod deobf dependency examples - these get remapped to your current mappings
     // compileOnly fg.deobf("mezz.jei:jei-${mc_version}:${jei_version}:api") // Adds JEI API as a compile dependency
@@ -165,6 +168,8 @@ dependencies {
 
     // kotlin
     implementation fg.deobf("curse.maven:kotlin-for-forge-351264:4311661")
+    // valkyrien skies core
+    implementation("org.valkyrienskies.core:api:1.1.0+c92814e9b7")
     // valkyrien skies
     implementation fg.deobf("curse.maven:valkyrien-skies-258371:4367151")
     // eureka ships
